@@ -1,0 +1,65 @@
+.mdm-builder(@size, @time) {
+  // Icon
+  .md-menu {
+    button {
+      display: block;
+      border: none;
+      background: none;
+      outline: 0;
+    }
+    .mdm-icon {
+      padding: 1rem 1rem;
+      cursor: pointer;
+      .mdm-layer {
+        display: block;
+        width: @size;
+        height: round(@size / 10, 2);
+        background: #eee;
+        position: relative;
+        margin-bottom: round(@size / 10, 2);
+        &:before {
+          transition: bottom @time ease-in-out;
+        }
+        &:after {
+          transition: top @time ease-in-out;
+        }
+        &:nth-child(odd) {
+          &:before {
+            display: block;
+            width: inherit;
+            height: round(@size / 10, 2);
+            position: absolute;
+            background: inherit;
+            left: 0;
+            content: '';
+            bottom: 100%;
+          }
+          &.__expanded:before {
+            bottom: 200%;
+          }
+          &.collapsed:before {
+            bottom: 100%;
+          }
+        }
+        &:nth-child(even) {
+          &:after {
+            display: block;
+            width: inherit;
+            height: round(@size / 10, 2);
+            position: absolute;
+            background: inherit;
+            left: 0;
+            content: '';
+            top: 100%;
+          }
+          &.__expanded:after {
+            top: 200%;
+          }
+          &.__collapsed:after {
+            top: 100%;
+          }
+        }
+      }
+    }
+  }
+}

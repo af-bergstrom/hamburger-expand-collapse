@@ -1,0 +1,223 @@
+@import 'mdm-mixin';
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.body-bg {
+  -webkit-animation: pulsate 75s linear infinite;
+  animation: pulsate 75s linear infinite;
+}
+body {
+  font-family: sans-serif;
+  @-webkit-keyframes pulsate {
+    0% {
+      color: #333;  background: #fff
+    }
+    7% {
+      color: #0c85ff; background: #001F3F
+    }
+    14% {
+      color: #40a9ff; background: #0074D9
+    }
+    21% {
+      color: #00a8e5; background: #7FDBFF
+    }
+    28% {
+      color: #165656; background: #39CCCC
+    }
+    35% {
+      color: #112c20; background: #3D9970
+    }
+    42% {
+      color: #124f18; background: #2ECC40
+    }
+    49% {
+      color: #00672d; background: #01FF70
+    }
+    56% {
+      color: #665700; background: #FFDC00
+    }
+    63% {
+      color: #ffd6b4; background: #FF851B
+    }
+    70% {
+      color: #ffd1cf; background: #FF4136
+    }
+    77% {
+      color: #e44e99; background: #85144B
+    }
+    84% {
+      color: #f9a2e6; background: #F012BE
+    }
+    91% {
+      color: #e679f6; background: #B10DC9
+    }
+    95% {
+      color: #5e5e5e; background: #111
+    }
+    96% {
+      color: #919191; background: #ddd
+    }
+    98% {
+      color: #5d5d5d; background: #aaa
+    }
+    100% {
+      color: #b3b3b3; background: #fff
+    }
+  }
+  @keyframes pulsate {
+    0% {
+      color: #333;  background: #fff
+    }
+    7% {
+      color: #0c85ff; background: #001F3F
+    }
+    14% {
+      color: #40a9ff; background: #0074D9
+    }
+    21% {
+      color: #00a8e5; background: #7FDBFF
+    }
+    28% {
+      color: #165656; background: #39CCCC
+    }
+    35% {
+      color: #112c20; background: #3D9970
+    }
+    42% {
+      color: #124f18; background: #2ECC40
+    }
+    49% {
+      color: #00672d; background: #01FF70
+    }
+    56% {
+      color: #665700; background: #FFDC00
+    }
+    63% {
+      color: #ffd6b4; background: #FF851B
+    }
+    70% {
+      color: #ffd1cf; background: #FF4136
+    }
+    77% {
+      color: #e44e99; background: #85144B
+    }
+    84% {
+      color: #f9a2e6; background: #F012BE
+    }
+    91% {
+      color: #e679f6; background: #B10DC9
+    }
+    95% {
+      color: #5e5e5e; background: #111
+    }
+    96% {
+      color: #919191; background: #ddd
+    }
+    98% {
+      color: #5d5d5d; background: #aaa
+    }
+    100% {
+      color: #b3b3b3; background: #fff
+    }
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+  }
+}
+.base {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+section.message {
+  .base;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  h1 {
+    text-transform: uppercase;
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
+    @media (min-width: 992px) {
+      font-size: 2.5em;
+    }
+    @media (min-width: 1200px) {
+      font-size: 3em;
+    }
+  }
+  p {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    font-weight: 100;
+  }
+}
+section.content {
+  .base;
+  &:before, &:after {
+    display: table;
+    content: ' ';
+  }
+  &:after {
+    clear: both;
+  }
+  .wrapper {
+    width: 50%;
+    margin: 0 auto;
+    @media (min-width: 992px) {
+      width: 25%;
+    }
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+section.footer {
+  .base;
+  ul {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    li {
+      display: inline-block;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  }
+  .dedication {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 60px;
+  }
+}
+.box {
+  margin-bottom: 50%;
+  button {
+    display: block;
+    margin: auto auto;
+  }
+}
+
+
+.box {
+  .mdm-builder(100px, 300ms);
+}

@@ -1,0 +1,1 @@
+$(function(){var a;a=$(".mdm-icon"),a.on("click",function(){var a;a=$(".mdm-layer",this),a.hasClass("__expanded")?a.removeClass("__expanded").addClass("__collapsed"):a.addClass("__expanded").removeClass("__collapsed")})});
